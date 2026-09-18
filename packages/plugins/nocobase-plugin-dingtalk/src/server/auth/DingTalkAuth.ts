@@ -29,7 +29,7 @@ export class DingTalkAuth extends BaseAuth {
       ...this.#authConfigOptions,
       internal: {
         userCheckType: this.#authConfigOptions.internal.userCheckType,
-        emailDomains: config.options.internal.emailDomain?.split('\s*,\s*') || [],
+        emailDomains: config.options.internal.emailDomain?.split(/\s*,\s*/) || [],
       }
     }
   }

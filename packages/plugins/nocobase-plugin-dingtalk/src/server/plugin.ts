@@ -18,7 +18,8 @@ export class NocobasePluginDingTalkServer extends Plugin {
       name: ResoureName,
       actions: dingTalkActions,
     })
-    this.app.acl.allow(ResoureName, '*');
+    // 仅对未登录用户开放登录流所需的两个接口，避免放开全部角色
+    this.app.acl.allow(ResoureName, ['getAuthUrl', 'redirectAuth'], 'public');
   }
 
   async install() {}
