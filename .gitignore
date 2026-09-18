@@ -21,3 +21,4 @@ dist/
 /docker/**/storage
 /storage/.app-dev
 /storage/
+.workbuddy/
