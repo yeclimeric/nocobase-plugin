@@ -2,8 +2,8 @@ import { Plugin } from '@nocobase/client';
 import AuthPlugin from '@nocobase/plugin-auth/client';
 import { DingTalkAuthAdminSettingsForm, DingTalkAuthButton } from './auth/DingTalkAuthComponent';
 import { NAMESPACE } from './locale';
-import zhCN from '../../locale/zh_CN';
-import enUS from '../../locale/en-US';
+import zhCN from '../locale/zh_CN';
+import enUS from '../locale/en-US';
 
 export class NocobasePluginDingTalkClient extends Plugin {
   async afterAdd() {
