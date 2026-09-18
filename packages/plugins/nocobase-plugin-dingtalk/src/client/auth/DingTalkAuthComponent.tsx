@@ -3,7 +3,7 @@ import { Button } from 'antd';
 import { DingtalkOutlined } from '@ant-design/icons';
 import type { Authenticator } from '@nocobase/plugin-auth/client';
 import { SchemaComponent, useResource } from '@nocobase/client';
-// import { usePluginTranslation } from '../locale';
+import { usePluginTranslation } from '../locale';
 
 export const DingTalkAuthButton = (props: { authenticator: Authenticator }) => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,6 @@ export const DingTalkAuthButton = (props: { authenticator: Authenticator }) => {
           redirect: new URLSearchParams(location.search ? location.search.substring(1) : '').get('redirect') || '',
         }
       })
-      console.log('uu', res, res.data)
       location.href = res.data.data;
     } finally {
       setTimeout(() => {
@@ -32,11 +31,9 @@ export const DingTalkAuthButton = (props: { authenticator: Authenticator }) => {
 }
 
 export const DingTalkAuthAdminSettingsForm = (props: { authenticator: Authenticator }) => {
-  // const t = usePluginTranslation()
-  console.log('aaa', props)
+  const { t } = usePluginTranslation();
   return (
     <SchemaComponent
-      // scope={{ t }}
       schema={{
         type: 'object',
         properties: {
@@ -49,8 +46,7 @@ export const DingTalkAuthAdminSettingsForm = (props: { authenticator: Authentica
                   autoSignup: {
                     'x-decorator': 'FormItem',
                     type: 'boolean',
-                    // title: '{{t("Sign up automatically when the user does not exist")}}',
-                    title: '用户不存在时自动注册',
+                    title: t('Auto sign up when user does not exist'),
                     required: false,
                     'x-component': 'Checkbox',
                   },
@@ -62,36 +58,35 @@ export const DingTalkAuthAdminSettingsForm = (props: { authenticator: Authentica
                   userCheckType: {
                     'x-decorator': 'FormItem',
                     type: 'string',
-                    title: '用户验证方式',
+                    title: t('User verification method'),
                     required: true,
                     'x-component': 'Select',
                     'x-component-props': {
-                      // defaultValue: 'orgEmail',
                       options: [
-                        { value: 'orgEmail', label: '企业邮箱' },
-                        { value: 'personalEmail', label: '个人邮箱' },
-                        { value: 'mobile', label: '手机号' },
+                        { value: 'orgEmail', label: t('Organization email') },
+                        { value: 'personalEmail', label: t('Personal email') },
+                        { value: 'mobile', label: t('Mobile') },
                       ]
                     }
                   },
                   emailDomain: {
                     'x-decorator': 'FormItem',
                     type: 'string',
-                    title: '邮箱域名，多个使用英文逗号分隔',
+                    title: t('Email domains, separated by commas'),
                     required: true,
                     'x-component': 'Input',
                   },
                   appKey: {
                     'x-decorator': 'FormItem',
                     type: 'string',
-                    title: '应用ID',
+                    title: t('App ID'),
                     required: true,
                     'x-component': 'Input',
                   },
                   appSecret: {
                     'x-decorator': 'FormItem',
                     type: 'string',
-                    title: '应用秘钥',
+                    title: t('App Secret'),
                     required: true,
                     'x-component': 'Password',
                   },
