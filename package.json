@@ -27,9 +27,7 @@
     "postinstall": "nocobase postinstall",
     "lint": "eslint .",
     "pm2": "nocobase pm2",
-    "build:dingtalk": "yarn build dingtalk",
-    "publish:plugin": "yarn build $1 && npm publish --access=public packages/plugins/nocobase-plugin-$1 --registry=https://registry.npmjs.org",
-    "publish:dingtalk": "yarn publish:plugin dingtalk"
+    "pp": "bash scripts/publish-plugin.sh"
   },
   "resolutions": {
     "cytoscape": "3.28.0",
