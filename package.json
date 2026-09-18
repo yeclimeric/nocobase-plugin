@@ -20,15 +20,16 @@
     "dev-server-p": "nocobase dev --server -p 13005",
     "start": "nocobase start",
     "clean": "nocobase clean",
-    "build": "nocobase build",
+    "build": "nocobase build ${1:+nocobase-plugin-$1 --tar}",
     "test": "nocobase test",
     "e2e": "nocobase e2e",
     "tar": "nocobase tar",
     "postinstall": "nocobase postinstall",
     "lint": "eslint .",
     "pm2": "nocobase pm2",
-    "build:dingtalk":"nocobase build nocobase-plugin-dingtalk --tar",
-    "publish:dingtalk":"yarn build:dingtalk && npm publish --access=public packages/plugins/nocobase-plugin-dingtalk --registry=https://registry.npmjs.org"
+    "build:dingtalk": "yarn build dingtalk",
+    "publish:plugin": "yarn build $1 && npm publish --access=public packages/plugins/nocobase-plugin-$1 --registry=https://registry.npmjs.org",
+    "publish:dingtalk": "yarn publish:plugin dingtalk"
   },
   "resolutions": {
     "cytoscape": "3.28.0",
