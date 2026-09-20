@@ -2,7 +2,7 @@
 
 - [DingTalk 钉钉登录](./packages/plugins/nocobase-plugin-dingtalk/) [![NPM badge](https://img.shields.io/npm/v/@yeclimeric/nocobase-plugin-dingtalk.svg)](https://www.npmjs.com/package/@yeclimeric/nocobase-plugin-dingtalk)
 
-插件目录约定：`packages/plugins/nocobase-plugin-<短名>`，下述命令中的 `<短名>` 即该目录后缀（如 `dingtalk`、`ext`）。
+插件目录约定：`packages/plugins/nocobase-plugin-<短名>`，下述命令中的 `<短名>` 即该目录后缀（如 `dingtalk`）。
 
 ## 安装Nocobase
 
@@ -37,12 +37,15 @@ yarn dev-server-p   # 服务端 13005
 
 ```shell
 # 自动创建nocobase-plugin-xxx命名的插件
-yarn create xxx
+yarn pm create xxx
 # 如果创建的插件未在插件管理器里显示，可以通过 pm add 命令手动添加
-yarn add xxx
+yarn pm add xxx
 # 激活插件
-yarn pm enable nocobase-plugin-xxx
+yarn pm enable xxx
 ```
+
+> `pm` 子命令的插件名参数均支持短名（如 `dingtalk`），自动解析为 `packages/plugins/nocobase-plugin-<短名>` 的完整包名（scoped 包如 `@yeclimeric/*` 也能正确解析）；传全名（`nocobase-plugin-*` / `@scope/*`）则原样透传。
+> 注意不要写成 `yarn create` / `yarn add`——那是 yarn 内置命令（脚手架初始化 / 安装依赖），脚本无法覆盖。
 
 ## 更新插件
 
