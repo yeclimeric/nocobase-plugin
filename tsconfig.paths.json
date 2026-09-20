@@ -18,18 +18,6 @@
       ],
       "@yeclimeric/nocobase-plugin-dingtalk": [
         "packages/plugins/nocobase-plugin-dingtalk/src"
-      ],
-      "nocobase-plugin-ext/client": [
-        "packages/plugins/nocobase-plugin-ext/src/client"
-      ],
-      "nocobase-plugin-ext/client-v2": [
-        "packages/plugins/nocobase-plugin-ext/src/client-v2"
-      ],
-      "nocobase-plugin-ext/package.json": [
-        "packages/plugins/nocobase-plugin-ext/package.json"
-      ],
-      "nocobase-plugin-ext": [
-        "packages/plugins/nocobase-plugin-ext/src"
       ]
     }
   }

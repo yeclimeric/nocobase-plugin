@@ -23,7 +23,7 @@
     "build": "nocobase build ${1:+nocobase-plugin-$1 --tar}",
     "test": "nocobase test",
     "e2e": "nocobase e2e",
-    "tar": "nocobase tar",
+    "tar": "nocobase tar ${1:+nocobase-plugin-$1}",
     "postinstall": "nocobase postinstall",
     "lint": "eslint .",
     "pm2": "nocobase pm2",
