@@ -36,9 +36,10 @@ yarn dev-server-p   # 服务端 13005
 ## 创建插件
 
 ```shell
-yarn pm create nocobase-plugin-xxx
+# 自动创建nocobase-plugin-xxx命名的插件
+yarn create xxx
 # 如果创建的插件未在插件管理器里显示，可以通过 pm add 命令手动添加
-yarn pm add nocobase-plugin-xxx
+yarn add xxx
 # 激活插件
 yarn pm enable nocobase-plugin-xxx
 ```
@@ -65,7 +66,6 @@ yarn lerna add @apidevtools/json-schema-ref-parser --scope=@yeclimeric/nocobase-
 yarn build dingtalk
 
 # 分步骤
-yarn nocobase build nocobase-plugin-dingtalk
 yarn tar dingtalk
 ```
 
@@ -74,10 +74,7 @@ yarn tar dingtalk
 ## 发布插件到npm仓库
 
 ```shell
+npm login
 # 推荐：构建 + 打包 + 发布一条龙
 yarn pp dingtalk
-
-# 手动发布需进入插件目录执行（在根目录直接 npm publish 会因 workspace 报错）
-cd packages/plugins/nocobase-plugin-dingtalk
-npm publish --access=public --registry=https://registry.npmjs.org
 ```
