@@ -1,7 +1,6 @@
 ## 已有插件
 
 - [DingTalk 钉钉登录](./packages/plugins/nocobase-plugin-dingtalk/) [![NPM badge](https://img.shields.io/npm/v/@yeclimeric/nocobase-plugin-dingtalk.svg)](https://www.npmjs.com/package/@yeclimeric/nocobase-plugin-dingtalk)
-- [Ext 扩展组件](./packages/plugins/nocobase-plugin-ext/)（示例插件，未发布 npm）
 
 插件目录约定：`packages/plugins/nocobase-plugin-<短名>`，下述命令中的 `<短名>` 即该目录后缀（如 `dingtalk`、`ext`）。
 
@@ -67,7 +66,7 @@ yarn build dingtalk
 
 # 分步骤
 yarn nocobase build nocobase-plugin-dingtalk
-yarn tar nocobase-plugin-dingtalk
+yarn tar dingtalk
 ```
 
 产物在`storage/tar/`下，形如`@yeclimeric/nocobase-plugin-dingtalk-<版本>.tgz`，上传到 NocoBase 插件管理器升级即可。
