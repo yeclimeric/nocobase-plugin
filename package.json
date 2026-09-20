@@ -41,8 +41,8 @@
     "semver": "^7.7.1"
   },
   "dependencies": {
-    "@nocobase/acl": "^1.9.0",
-    "@nocobase/cli": "1.9.26",
+    "@nocobase/acl": "^2.2.15",
+    "@nocobase/cli": "2.2.15",
     "sqlite3": "^5.0.8",
     "pm2": "^6.0.5",
     "mysql2": "^3.14.0",
@@ -51,6 +51,6 @@
     "pg-hstore": "^2.3.4"
   },
   "devDependencies": {
-    "@nocobase/devtools": "1.9.26"
+    "@nocobase/devtools": "2.2.15"
   }
 }

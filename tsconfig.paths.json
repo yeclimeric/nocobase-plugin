@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
     "paths": {
+      "@docs/*": [
+        "docs/docs/*"
+      ],
       "@@/*": [
         ".dumi/tmp/*"
       ],
       "@yeclimeric/nocobase-plugin-dingtalk/client": [
         "packages/plugins/nocobase-plugin-dingtalk/src/client"
+      ],
+      "@yeclimeric/nocobase-plugin-dingtalk/client-v2": [
+        "packages/plugins/nocobase-plugin-dingtalk/src/client-v2"
       ],
       "@yeclimeric/nocobase-plugin-dingtalk/package.json": [
         "packages/plugins/nocobase-plugin-dingtalk/package.json"
@@ -15,6 +21,9 @@
       ],
       "nocobase-plugin-ext/client": [
         "packages/plugins/nocobase-plugin-ext/src/client"
+      ],
+      "nocobase-plugin-ext/client-v2": [
+        "packages/plugins/nocobase-plugin-ext/src/client-v2"
       ],
       "nocobase-plugin-ext/package.json": [
         "packages/plugins/nocobase-plugin-ext/package.json"
